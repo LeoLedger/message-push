@@ -1,0 +1,31 @@
+spring:
+  activiti:
+    history-level: full
+  application:
+    name: message-push-server
+  cloud:
+    config: # url规则是 uri/name/profile/label
+      uri: #配置中心地址
+      token:  # 对应header里面的x-config-token
+      # profile: @profileName@  # 用于指定文件 hw.topevery.cloud.%s.xml的%s变量值
+      profile: baoan-local  # 用于指定文件 hw.topevery.cloud.%s.xml的%s变量值
+      name: message-push-server  # 对应配置文件中的applicationModule.code
+      label: local  # 暂时没用上
+
+
+
+
+#########################################  配置中心如果已经配置，以配置中心为准 start #################################################
+run:
+  base:
+#    url: http://192.168.0.109:9902
+#    url: http://192.168.0.109:9902
+    url: http://192.168.0.109:9902
+    system-code:
+#      - JCYSCS
+#      - bahw
+#      - SSSP
+      - bahw
+
+
+#########################################  配置中心如果已经配置，以配置中心为准 end #################################################
